@@ -61,7 +61,9 @@ func jsonWalk(key string, value interface{}, depth, flag int) {
 	case []interface{}:
 		parseJson(key, value, depth, flag|arrFlag)
 	}
-	fmt.Println(si)
+	if si != nil {
+		fmt.Println(si)
+	}
 }
 
 func parseJson(name string, record interface{}, depth, flag int) {
